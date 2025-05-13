@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 10, 10, 15;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Animation for blob effect */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* RTL support for inputs */
+input[dir="ltr"],
+textarea[dir="ltr"] {
+  text-align: left;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Improve touch targets */
+@media (max-width: 640px) {
+  a,
+  button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+  }
+}
+
+/* Fix iOS input styling */
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* منع مشاكل التجاوز في الشاشات الصغيرة */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* تحسين عرض العناصر في الشاشات الصغيرة */
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    word-wrap: break-word;
+  }
+}

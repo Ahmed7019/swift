@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://swift-eg.com/sitemap.xml
+
+# Language specific sitemaps
+Sitemap: https://swift-eg.com/ar/sitemap.xml
+Sitemap: https://swift-eg.com/en/sitemap.xml
